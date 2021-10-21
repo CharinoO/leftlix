@@ -1,0 +1,533 @@
+*{
+    margin: 0;
+    font-family: 'Helvetica Neue','Helvetica', Arial, sans-serif;
+}
+
+#slider{
+    width: 100%;
+    height: 900px;
+    overflow: hidden;
+}
+
+.header{
+    margin: 5vw 0px;
+    width: 100%;
+}
+
+#logo{
+    height: 15vh;
+    width: 15vw;
+    position: absolute;
+    left: 5vw;
+    top: 1vh;
+}
+
+.menu{
+    position: absolute;
+    display: inline-block;
+    color: white;
+    transition: 0.5s;
+    background-color: transparent;
+    border:none;
+    margin:0;
+    padding:2vh;
+    cursor: pointer;
+    font-size: 3vw;
+}
+
+.menu i{
+    display: inline;
+    margin-left: 1vw;
+}
+
+
+.button{
+    background-color: transparent;
+}
+
+.dropdown{
+    display: inline-block;
+    position: absolute;
+    top: 4vh;
+    right: 25vw;
+}
+
+.dropdown-content{
+    display: none;
+    top: 40px;
+    position: absolute;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    transition: 0.5s;
+}
+.dropdown-content a:hover {
+    background-color: rgb(51, 51, 51);
+    border-left: 2px solid white;
+}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+.origin-text{
+    font-size: 2vw;
+    color: red;
+    font-weight: bold;
+}
+
+
+#next-korea, #prev-korea{
+    font-size: 25px;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 0% 1vw;
+    transition: 0.5s;
+    position: absolute;
+    top: 20vw;
+}
+
+#next-thailand, #prev-thailand{
+    font-size: 25px;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 0% 1vw;
+    transition: 0.5s;
+    position: absolute;
+    top: 53vw;
+}
+
+#next-china, #prev-china{
+    font-size: 25px;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 0% 1vw;
+    transition: 0.5s;
+    position: absolute;
+    top: 85vw;
+}
+
+#next-indonesia, #prev-indonesia{
+    font-size: 25px;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 0% 1vw;
+    transition: 0.5s;
+    position: absolute;
+    top: 117vw;
+}
+
+#next-western, #prev-western{
+    font-size: 25px;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 0% 1vw;
+    transition: 0.5s;
+    position: absolute;
+    top: 150vw;
+}
+
+#prev-korea{
+    left: 1vw;
+}
+
+#prev-thailand{
+    left: 1vw;
+}
+
+#prev-china{
+    left: 1vw;
+}
+
+#prev-indonesia{
+    left: 1vw;
+}
+
+#prev-western {
+    left: 1vw;
+}
+
+
+
+#next-korea {
+    right: 1vw;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+#next-thailand {
+    right: 1vw;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+#next-china {
+    right: 1vw;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+#next-indonesia{
+    right: 1vw;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+#next-western{
+    right: 1vw;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+/* .footer{
+    width: 100%;
+    background-color: black;
+}
+
+.social-media-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer img{
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.footer p{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+} */
+.footer{
+    width: 100%;
+    background-color: black;
+    /* background-color: burlywood; */
+}
+
+.social-media-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vh;
+}
+
+.footer img{
+    width: 50px;
+    height: 50px;
+    margin-right: 1vw;
+    margin-left: 1vw;
+}
+
+.footer p{
+    color: white;
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+
+#dramabar{
+    width: 100%;
+    height: auto;
+    display: block;
+    flex-direction: row;
+}
+
+.drama{
+    display: inline-block;
+    margin: 0vw 1vw;
+    width:27vw;
+}
+
+.slideshow-korea {display: none;}
+.slideshow-thailand {display: none;}
+.slideshow-china {display: none;}
+.slideshow-indonesia {display: none;}
+.slideshow-western {display: none;}
+
+.slideshow-container {
+    max-height: fit-content;
+    max-width: 100%;
+    position: relative;
+    margin: 0vw 0vw;
+}
+  
+.text {
+    color: #f2f2f2;
+    font-size: 1vw;
+    padding: 8px 12px;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot-korea {
+    height: 15px;
+    width: 15px;
+    margin: 1vh 0.5vw;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot-thailand {
+    height: 15px;
+    width: 15px;
+    margin: 1vh 0.5vw;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot-china {
+    height: 15px;
+    width: 15px;
+    margin: 1vh 0.5vw;;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot-indonesia {
+    height: 15px;
+    width: 15px;
+    margin: 1vh 0.5vw;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot-western {
+    height: 15px;
+    width: 15px;
+    margin: 1vh 0.5vw;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@media only screen and (max-width: 900px) {
+    .text {font-size: 11px}
+    #logo{
+        width: 20vw;
+        height: auto;
+    }
+
+    .header{
+        margin: 8vw 0px;
+        width: 100%;
+    }
+
+    .dropdown{
+        display: inline-block;
+        position: absolute;
+        top: 4vh;
+        right: 25vw;
+    }
+    
+    .dropdown-content{
+        display: none;
+        top: 5vw;
+        position: absolute;
+        background-color: rgba(0,0,0,0.6);
+        border-radius: 10px;
+        box-shadow: 0px 1vw 2vw 0px rgba(0,0,0,0.3);
+        z-index: 1;
+        /* min-width: 160px; */
+    }
+    
+    .dropdown-content a {
+        color: white;
+        /* padding: 12px 16px; */
+        text-decoration: none;
+        display: block;
+        font-size: 3vw;
+        transition: 0.5s;
+    }
+    #next-korea, #prev-korea{
+        font-size: 25px;
+		width: 7vw;
+        color: white;
+        border-radius: 1vw;
+        border: none;
+        padding: 0 1vw;
+        transition: 0.5s;
+        position: absolute;
+        top: 25vw;
+    }
+    
+    #next-thailand, #prev-thailand{
+        font-size: 25px;
+		width: 7vw;
+        color: white;
+        border-radius: 1vw;
+        border: none;
+        padding: 0% 1vw;
+        transition: 0.5s;
+        position: absolute;
+        top: 58vw;
+    }
+    
+    #next-china, #prev-china{
+        font-size: 25px;
+		width: 7vw;
+        color: white;
+        border-radius: 1vw;
+        border: none;
+        padding: 0% 1vw;
+        transition: 0.5s;
+        position: absolute;
+        top: 90vw;
+    }
+    
+    #next-indonesia, #prev-indonesia{
+        font-size: 25px;
+		width: 7vw;
+        color: white;
+        border-radius: 1vw;
+        border: none;
+        padding: 0% 1vw;
+        transition: 0.5s;
+        position: absolute;
+        top: 123vw;
+    }
+    
+    #next-western, #prev-western{
+        font-size: 25px;
+		width: 7vw;
+        color: white;
+        border-radius: 1vw;
+        border: none;
+        padding: 0% 1vw;
+        transition: 0.5s;
+        position: absolute;
+        top: 155vw;
+    }
+
+    .menu{
+        position: absolute;
+        display: inline-block;
+        color: white;
+        transition: 0.5s;
+        background-color: transparent;
+        border:none;
+        margin:0;
+        padding:2vh;
+        cursor: pointer;
+        font-size: 3vw;
+    }
+
+
+	.dot-korea {
+		height: 15px;
+		width: 15px;
+		margin: 0px 0.5vw 0vw 0.5vw;  
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+	}
+
+	.dot-thailand {
+		height: 15px;
+		width: 15px;
+		margin: 0px 0.5vw 0vw 0.5vw;  
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+	}
+
+	.dot-china {
+		height: 15px;
+		width: 15px;
+		margin: 0px 0.5vw 0vw 0.5vw;  
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+	}
+
+	.dot-indonesia {
+		height: 15px;
+		width: 15px;
+		margin: 0px 0.5vw 0vw 0.5vw;  
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+	}
+
+	.dot-western {
+		height: 15px;
+		width: 15px;
+		margin: 0px 0.5vw 0vw 0.5vw;  
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+	}
+
+    .text {
+        color: #f2f2f2;
+        font-size: 1.5vw;
+        /* padding: 1vw 3vw; */
+        bottom: 0.5vw;
+        width: 100%;
+        text-align: center;
+    }
+}

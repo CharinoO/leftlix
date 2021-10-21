@@ -1,0 +1,817 @@
+*{
+    margin: 0;
+    font-family: 'Helvetica Neue','Helvetica', Arial, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#slider{
+    width: 100%;
+    overflow: hidden;
+}
+
+#container{
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    transition: 1s;
+}
+
+#logo{
+    height: 15vh;
+    width: 15vw;
+    position: absolute;
+    left: 5vw;
+    top: 1vh;
+}
+
+.menu{
+    position: absolute;
+    display: inline-block;
+    /* right: 200px; */
+    /* top: 50px; */
+    /* top: -10px; */
+    color: white;
+    transition: 0.5s;
+    background-color: transparent;
+    border:none;
+    margin:0;
+    padding:2vh;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.menu i{
+    display: inline;
+    margin-left: 1vw;
+}
+
+.dropdown{
+    display: inline-block;
+    position: absolute;
+    top: 4vh;
+    right: 25vw;
+}
+
+.dropdown-content{
+    display: none;
+    top: 6vh;
+    position: absolute;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.dropdown-content a {
+    color: white;
+    /* padding: 12px 16px; */
+    padding: 2vh 2vw;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+img{
+    width: 100%;
+    height: 130vh;
+    /* height: 900px; */
+}
+
+#next, #prev{
+    font-size: 25px;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 0% 2.5%;
+    transition: 0.5s;
+    position: absolute;
+}
+
+#next{
+    /* left: 100px; */
+    left: 5vw;
+    /* top: 450px; */
+    top: 50vh;
+}
+
+#prev{
+    right: 5vw;
+    /* top: 450px; */
+    top: 50vh;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(51, 51, 51);
+    border-left: 2px solid white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+#next:hover, #prev:hover{
+    /* background-color: dodgerblue; */
+    filter: brightness(0.6);
+}
+
+.menu:hover{
+    filter: brightness(0.6);
+}
+
+.content{
+    width: 100%;
+    background-color: black;
+    padding-bottom: 5vh;
+}
+
+.content h1{
+    text-align: center;
+    color: white;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.first-benefit{
+    margin: auto;
+    border: 2px solid white;
+    width: 90vw;
+    height: 30vh;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 3vh;
+}
+
+
+.first-benefit .first-benefit-title{
+    display: inline-block;
+    margin-top: 8vh;
+    margin-left: 4vw;
+}
+
+
+.first-benefit-title h3{
+    position: absolute;
+    margin-left: 100px;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.first-benefit-title p{
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 100px;
+    font-size: 15px;
+}
+
+.first-benefit img{
+    position: absolute;
+    width: 10vw;
+    height: 15vh; 
+    right: 25vw;
+    margin-top: 6vh;
+}
+
+.second-benefit{
+    margin: auto;
+    border: 2px solid white;
+    width: 90vw;
+    height: 30vh;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 3vh;
+}
+
+.second-benefit img{
+    position: absolute;
+    display: inline-block;
+    width: 10vw;
+    height: 15vh;
+    margin-left: 15vw;
+    margin-top: 6vh;
+}
+
+.second-benefit .second-benefit-title{
+    display: inline-block;
+    position: absolute;
+    margin-top: 5vh;
+    right: 4vw;
+    width: 40vw;
+}
+
+.second-benefit-title h3{
+    position: absolute;
+    font-size: 30px;
+    margin-top: 6vh;
+}
+
+.second-benefit-title p{
+    position: absolute;
+    margin-top: 12vh;
+    font-size: 15px;
+}
+
+.footer{
+    width: 100%;
+    background-color: black;
+    /* background-color: burlywood; */
+}
+
+.social-media-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vh;
+}
+
+.footer img{
+    width: 50px;
+    height: 50px;
+    margin-right: 1vw;
+    margin-left: 1vw;
+}
+
+.footer p{
+    color: white;
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.subscription-form{
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+.subscription-form h1{
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.subscription-form p{
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 3vh;
+}
+
+.subscription-form table{
+    border-spacing: 20px;
+    width: 40vw;
+    margin: auto;
+    margin-bottom: 0;
+}
+#errorMsg{
+    color: red;
+}
+
+/* .subscription-form table tr td input{
+    width: 300px;
+    height: 25px;
+} */
+
+.subscription-form table tr td:first-child{
+    padding-left: 2vw;
+    /* background-color: cornflowerblue; */
+}
+
+.subscription-form table tr td:last-child{
+    display: inline-block;
+} 
+
+/* .subscription-form table tr td:last-child input{
+    height: 20px;
+} */
+
+.checkbox-agreement{
+    font-size: 15px;
+    padding-top: 1vh;
+}
+
+.gender-container{
+    /* display: inline-block; */
+    position: relative;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.gender-container input{
+    display: inline-block;
+    margin-left: 0;
+}
+
+.subscribe-button{
+    margin-left: 32.5vw;
+    width: 35vw;
+    height: 5vh;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 10vh;
+}
+
+.wide-input{
+    width: 100%;
+}
+
+#errorMsg{
+    margin-bottom: 1vh;
+    font-size: 12px;
+    width: 2vw;
+}
+
+/* ABOUT */
+
+.title-first{
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding-top: 15vh;
+    font-size: 20px;
+    width: 100%;
+}
+
+.title-first h1{
+    font-size: 50px; 
+}
+.first{
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    text-align: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+}
+
+.ceo{
+    color: white;
+    background-color: rgb(39, 39, 46);
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.ceo h1{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    font-size: 50px;
+}
+
+.ceo img{
+    border-radius: 50px;
+    width: 20%;
+    height: 20%;
+}
+
+.ceo p{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 10vh;
+}
+
+.culture{
+    background: rgb(0,0,0,0.5)url("Assets/Image/freedom.jpg");
+    color: white;
+    height:50vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
+    text-align: center;
+}
+
+.culture h1{
+    text-align: center;
+    padding-top: 5vh;
+    font-size: 50px;
+
+}
+
+.culture p{
+    font-size: 30px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 7vh;
+}
+
+.oneof-container{
+    width: 100%;
+}
+
+.oneof{
+    background-color: rgb(39, 39, 46);
+    text-align: center;
+    color: white;
+    font-size: 35pt;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    /* margin-top: -10px; */
+}
+
+.oneof h2 {
+    font-size: 50px;
+    width: 100%;
+}
+.ad{
+    background-color: rgb(39, 39, 46);
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10vh;
+    color: white;
+}
+
+.ads{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    text-align: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    color: white;
+}
+
+.ads h4{
+    padding-top: 2vh;
+    font-size: 18pt;
+    font-weight: bold;
+    color: black;
+}
+
+.ads p{
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    font-weight: bold;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-size: 13pt;
+     color: black;
+}
+
+.firstbox{
+    background-color: beige;
+}
+
+.secondbox{
+    background-color: beige;
+}
+
+.thirdbox{
+    background-color: beige;
+}
+
+/* .footer{
+    padding-top: 50px;
+    background-color: rgb(27, 27, 29);
+    color: white;
+} */
+.career{
+    text-align: center;
+    background-color: black;
+    padding-bottom: 10vh;
+    color: white;
+}
+.career h4{
+    font-size: 50px;
+}
+
+/* PLANS */
+.content-plans{
+    width: 100%;
+    background-color: black;
+    padding-top: 10vh;
+    color: white;
+}
+
+.plans-detail{
+    padding: 5vh 7vw;
+    margin-top: 1vh;
+}
+
+.plans-detail h1{
+    margin-bottom: 2vh;
+    font-size: 30px;
+}
+
+.plans-detail p{
+    font-size: 18px;
+}
+
+.detail-opening{
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+.plan-container{
+    display: flex;
+    justify-content: center;
+}
+
+.plan-items{
+    border: 1px solid white;
+    padding: 2vw;
+    width: 30vw;
+    margin-left: 20px;
+}
+.plan-items h3{
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+.feature-container p{
+    display: inline-block;
+    margin-bottom: 3vh;
+}
+
+.feature-container p:first-child{
+    /* width: 70%; */
+    /* background-color: blue; */
+    width: 60%;
+    font-size: 15px;
+}
+
+.feature-container p:last-child{
+    width: 35%;
+    font-size: 20px;
+    text-align: center;
+    /* background-color: coral; */
+    /* margin-left: 20px; */
+    /* right: 50px; */
+}
+
+.plan-end{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.redirect-subscription-plan{
+    color: red;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.redirect-subscription-plan:hover{
+    color: rgb(196, 69, 69);
+}
+
+
+@media only screen and (max-width: 900px){
+
+    #slider{
+        height: 80vh;
+    }
+    
+    #logo{
+        width: 20vw;
+    }
+
+    img{
+        height: 80vh;
+    }
+/* 
+    .menu{
+        margin-left: 40px;
+        margin-top: 10px;
+    } */
+    
+    /* .dropdown{
+        right: 250px;
+    }
+    
+    .dropdown-content{
+        top: 50px; 
+        margin-left: 45px;
+    } */
+
+    #next, #prev{
+        border: none;
+        padding: 0% 2.5%;
+        transition: 0.5s;
+        position: absolute;
+    }
+    
+    #next{
+        left: 5vw;
+        top: 40vh;
+    }
+    
+    #prev{
+        right: 5vw;
+        top: 40vh;
+    }
+
+    .content{
+        all: unset;
+        background-color: black;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .first-benefit{
+        all:unset;
+        width: 80vw;
+        border: 2px solid white;
+        height: 300px;
+        color: white;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .first-benefit .first-benefit-title{
+        all: unset;
+        position: absolute;
+        margin-top: 25vh;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .first-benefit-title h3{
+        all:unset;
+        display: block;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .first-benefit-title p{
+        all: unset;
+        font-size: 15px;
+    }
+    
+    .first-benefit img{
+        all: unset;
+        margin-top: 5vh;
+        width: 18vw;
+        height: 15vh;
+    } 
+
+    .second-benefit{
+        all:unset;
+        width: 80vw;
+        border: 2px solid white;
+        height: 45vh;
+        color: white;
+        border-radius: 10px;
+        margin-bottom: 3vh;
+        text-align: center;
+    }
+
+    .second-benefit img{
+        all: unset;
+        display: block;
+        width: 18vw;
+        height: 15vh;
+        margin: auto;
+        margin-top: 6vh;
+        margin-bottom: 2vh;
+    } 
+
+    .second-benefit .second-benefit-title{
+        all: unset;
+        width: 100%;
+        text-align: center;
+    }
+
+    .second-benefit-title h3{
+        all:unset;
+        display: block;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .second-benefit-title p{
+        all: unset;
+        font-size: 15px;
+    }
+
+    .plans-detail{
+        padding: 2% 8%;
+        width: 70%;
+    }
+
+    .plan-container{
+        /* display: flex;
+        justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .plan-items{
+        /* border: 1px solid white; */
+        padding: 2%;
+        width: 90%;
+        margin-left: 10%;
+        margin-bottom: 5%;
+    }
+
+    .feature-container p{
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+    
+    .feature-container p:first-child{
+        /* width: 70%; */
+        /* background-color: blue; */
+        margin-left: 10%;
+        width: 50%;
+        font-size: 15px;
+    }
+    
+    .feature-container p:last-child{
+        width: 35%;
+        font-size: 20px;
+        text-align: center;
+        /* background-color: coral; */
+        /* margin-left: 20px; */
+        /* right: 50px; */
+    }
+
+    .plan-end{
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    
+    /* .redirect-subscription-plan{
+        font-size: 15px;
+    } */
+
+    .subscription-form table{
+        width: 80%;
+    }
+
+    .subscribe-button{
+        margin-bottom: 70px;
+    }
+
+    .title-first h1{
+        padding-top: 70px;
+    }
+
+    .first{
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 30px;
+    }
+
+
+    .ceo p{
+        padding: 5px 30px 60px 30px;
+    }
+    
+    .culture h1{
+        padding-top: 50px;
+        font-size: 50px;
+    
+    }
+    
+    .culture p{
+        font-size: 25px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 60px;
+    }
+
+    .ad{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .ads{
+        width: 80%;
+        margin-bottom: 5%;
+    }
+    
+    .ads h4{
+        padding-top: 30px;
+    }
+    
+    .ads p{
+        padding-top: 40px;
+    }
+
+    .career{
+        padding: 0% 8% 5% 8%;
+    }
+    .career h4{
+        font-size: 50px;
+    }
+}
